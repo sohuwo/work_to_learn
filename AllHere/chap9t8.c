@@ -48,7 +48,7 @@ int roll_dice(void)
 {
 	Sleep(1000);
 	srand((unsigned)time(NULL));
-	return rand() % 6 + rand() % 6;	
+	return rand() % 5+1 + rand() % 5+1;	
 }
 
 int play_game(void)

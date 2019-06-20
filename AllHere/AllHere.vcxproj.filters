@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dweight.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dweight2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="celsius.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24e4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24t1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24t2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24t4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24t5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24t6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p24t8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p32addfrac.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p34e1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p34e4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p34e5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p34e6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p34e3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p35t1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p35t2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p35t5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p44example.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p47e2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p47e7.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p49t4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p65e1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p65e2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p65e3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p67t2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p67t7.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p68t8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p85t1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p86t2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gcd.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p86t3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p86t5.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p86t8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p87t11.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7e13.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7t4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7t6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7t12.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7t13.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7t14.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap7t15.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap8deal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap8t9.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap8t15.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap8t17.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9qsort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9e6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9e19.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9t1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9t7.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap9t8.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dweight.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dweight2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="celsius.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24e4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24t1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24t2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24t4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24t5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24t6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p24t8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p32addfrac.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p34e1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p34e4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p34e5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p34e6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p34e3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p35t1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p35t2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p35t5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p44example.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p47e2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p47e7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p49t4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p65e1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p65e2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p65e3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p67t2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p67t7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p68t8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p85t1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p86t2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GCD.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p86t3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p86t5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p86t8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="p87t11.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7e13.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7t4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7t6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7t12.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7t13.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7t14.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap7t15.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap8deal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap8t9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap8t15.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap8t17.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap9qsort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap9e6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap9e19.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap9t1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap9t7.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap9t8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

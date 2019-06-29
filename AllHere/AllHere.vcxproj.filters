@@ -177,6 +177,12 @@
     <ClCompile Include="chap9t8.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="baiduTieba.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chap10stack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dweight.h">
@@ -336,6 +342,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="chap9t8.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="baiduTieba.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap10stack.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

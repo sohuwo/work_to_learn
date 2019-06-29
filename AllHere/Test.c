@@ -1,8 +1,8 @@
 //This is main
 //Here include file
-#include "chap9t8.h"
+#include "chap10stack.h"
 int main(void)
 {
-	chap9t8();
+	chap10stack();
 	return 0;
 }

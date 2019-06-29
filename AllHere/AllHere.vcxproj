@@ -119,7 +119,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="baiduTieba.c" />
     <ClCompile Include="celsius.c" />
+    <ClCompile Include="chap10stack.c" />
     <ClCompile Include="chap7e13.c" />
     <ClCompile Include="chap7t12.c" />
     <ClCompile Include="chap7t13.c" />
@@ -175,7 +177,9 @@
     <ClCompile Include="p34e1.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="baiduTieba.h" />
     <ClInclude Include="celsius.h" />
+    <ClInclude Include="chap10stack.h" />
     <ClInclude Include="chap7e13.h" />
     <ClInclude Include="chap7t12.h" />
     <ClInclude Include="chap7t13.h" />

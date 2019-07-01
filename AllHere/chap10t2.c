@@ -39,7 +39,7 @@ void read_cards(int num_in_rank[], int num_in_suit[])
 		
 		printf("Enter a card: ");
 
-		rank_ch = gerchar();
+		rank_ch = getchar();
 		switch (rank_ch)
 		{
 		case '0':exit(EXIT_SUCCESS);
@@ -116,5 +116,30 @@ void analyse_hand(int num_in_rank[], int num_in_suit[])
 		return;
 	}
 
+	//check for 4-of-a-kind, 3-of-a-kind, and pairs
+	for (rank = 0; rank < NUM_RANKS; rank++)
+	{
+		if (num_in_rank[rank] == 4) four = true;
+		if (num_in_rank[rank] == 3) three = true;
+		if (num_in_rank[rank] == 2) pairs++;
+	}
+}
 
+//print_result:prints the classification of the hand,
+//             based on the values of the external
+//             variables straight,flush,four,three,
+//             and pairs.
+void print_result(void)
+{
+	if (straight && flush)printf("Straight flush");
+	else if (four) printf("Four of a kind");
+	else if (three && pairs == 1) printf("Full house");
+	else if (flush) printf("Flush");
+	else if (straight) printf("Straight");
+	else if (three) printf("Three of a kind");
+	else if (pairs == 2) printf("Two pairs");
+	else if (pairs == 1) printf("Pair");
+	else printf("High card");
+
+	printf("\n\n");
 }

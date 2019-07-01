@@ -4,7 +4,7 @@
 void p34e3(void)
 {
 	int i,j = 99,k= 99;
-	float f;
+	//float f;
 	scanf("%d", &i);
 	printf("%d\n", i);
 	while(getchar()!='\n');

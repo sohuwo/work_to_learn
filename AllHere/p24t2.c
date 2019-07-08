@@ -9,5 +9,5 @@ void p24t2(void)
 	scanf("%f", &r);
 	v = 4.0f / 3.0f*PI*r*r*r;
 	printf("The volume of ball is %.2f\n", v);
-	return v;
+	//return v;
 }

@@ -1,6 +1,5 @@
 #include "chap10stack.h"
 #include <stdio.h>
-//#include <stdbool.h>
 #include <stdlib.h>
 
 #define STACK_SIZE 100

@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define RANK 0
+#define SUIT 1
 //chap10t2:Calls read_cards,analyse_hand,and print_result repeatedly.
-void chap10t2(void)
+void chap10t3(void)
 {
 	int hand[NUM_CARDS][SUIT_AND_RANK];
 	for (;;)
@@ -17,7 +19,6 @@ void chap10t2(void)
 //read_cards:Reads the cards into the variables num_in_rank and num_in_suit;checks for bad cards and duplicate cards.
 void read_cards(int hand[][SUIT_AND_RANK], int n)
 {
-	bool card_exists[NUM_RANKS][NUM_SUITS];
 	char ch, rank_ch, suit_ch;
 	int rank, suit;
 	bool bad_card;
@@ -70,12 +71,14 @@ void read_cards(int hand[][SUIT_AND_RANK], int n)
 
 		if (bad_card)
 			printf("Bad card; ignored.\n");
-		else if (card_exists[rank][suit])
+		else if (1)
+		{
 			printf("Duplicate card; ignored.\n");
+		}
 		else
 		{
-			num_in_rank[rank]++;
-			num_in_suit[suit]++;
+			hand[cards_read][RANK] = rank;
+			hand[cards_read][SUIT] = suit;
 			card_exists[rank][suit] = true;
 			cards_read++;
 		}

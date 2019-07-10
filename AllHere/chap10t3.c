@@ -20,7 +20,7 @@ void chap10t3(void)
 void read_cards(int hand[][SUIT_AND_RANK], int n)
 {
 	char ch, rank_ch, suit_ch;
-	int rank, suit;
+	int rank, suit,exist=0;
 	bool bad_card;
 	int cards_read = 0;
 
@@ -69,17 +69,20 @@ void read_cards(int hand[][SUIT_AND_RANK], int n)
 		while ((ch = getchar()) != '\n')
 			if (ch != ' ') bad_card = true;
 
+		for (int i = 0; i < cards_read; i++)
+		{
+			if (hand[i][RANK] == rank && hand[i][SUIT] == suit)
+				exist = 1;
+		}
+
 		if (bad_card)
 			printf("Bad card; ignored.\n");
-		else if (1)
-		{
+		else if (exist)
 			printf("Duplicate card; ignored.\n");
-		}
 		else
 		{
 			hand[cards_read][RANK] = rank;
 			hand[cards_read][SUIT] = suit;
-			card_exists[rank][suit] = true;
 			cards_read++;
 		}
 	}

@@ -113,10 +113,14 @@ void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 		}
 		if (count == NUM_CARDS)
 				flush = true;
-	}
-		
+	}	
 
 	//check for straight
+	for (int i = 0; i < NUM_CARDS; i++)
+	{
+
+	}
+
 	rank = 0;
 	for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++)
 		num_consec++;

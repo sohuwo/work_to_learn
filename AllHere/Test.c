@@ -1,9 +1,9 @@
 
 //This is main
 //Here include file
-#include "baiduTieba.h"
+#include "chap10t3.h"
 int main(void)
 {
-	baiduTieba();
+	chap10t3();
 	return 0;
 }

@@ -117,17 +117,13 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 
 	//check for straight
 	for (int i = 0; i < NUM_CARDS-1; i++)
-	{
 		for (int j = 0; j < NUM_CARDS - i - 1; j++)
-		{
 			if (hand[j][RANK] > hand[j + 1][RANK])
 			{
 				int temp = hand[j][RANK];
 				hand[j][RANK] = hand[j + 1][RANK];
 				hand[j + 1][RANK] = temp;
 			}
-		}
-	}
 
 	rank = hand[0][RANK];
 	for (int i =0; i < NUM_CARDS && hand[i][RANK]==rank; rank++,i++)
@@ -140,38 +136,39 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 
 	//check for 4-of-a-kind ,3-of-a-kind, and pairs
 	{
-		int i , count_for_1 = 1, count_for_2 = 1, \
-			count_for_3 = 1,count_for_4=1;
-		for (i = 1; i < NUM_CARDS; i++)
-		{
-			if (hand[0][RANK] == hand[i][RANK])
-				count_for_1++;
-		}
-		for (i=2; i < NUM_CARDS; i++)
-		{
-			if (hand[1][RANK] == hand[i][RANK])
-				count_for_2++;
-		}
-		for (i = 3; i < NUM_CARDS; i++)
-		{
-			if (hand[2][RANK] == hand[i][RANK])
-				count_for_3++;
-		}
-		for (i = 4; i < NUM_CARDS; i++)
-		{
-			if (hand[3][RANK] == hand[i][RANK])
-				count_for_4++;
-		}
-		if (count_for_1 == 4 || count_for_2 == 4)
-		{
+		int i;
+		int count[NUM_CARDS] = { 0 };
+		
+		for (i = 0; i < NUM_CARDS-1; i++)
+			for (int j = i + 1; j < NUM_CARDS; j++)
+				if (hand[i][RANK] == hand[j][RANK])
+					count[i]++;
+		if (count[0] == 3 || count[1] == 3)
 			four = true;
+		if (count[0] == 2)
+		{
+			if (count[3] == 1)
+				pairs = 1;
+			three = true;
 			return;
 		}
-		if (count_for_1 == 3 || count_for_2 == 3 ||count_for_3==3)
+		if (count[2] == 2)
+		{
+			if (count[0] == 1)
+				pairs = 1;
 			three = true;
+			return;
+		}
+		if (count[0] == 2)
+		{
+			three = true;
+			return;
+		}
 		
+		for (i = 0; i < NUM_CARDS - 1; i++)
+			if (count[i] == 1)
+				pairs++;
 	}
-	//if (num_in_rank[rank] == 2) pairs++;
 }
 
 //print_result:Prints the classification of the hand,

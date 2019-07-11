@@ -15,8 +15,8 @@ void chap10t3(void);
 bool straight, flush, four, three;
 int pairs;//can be 0,1,2
 
-void read_cards(int hand[][SUIT_AND_RANK],int n);
-void analyse_hand(int hand[][SUIT_AND_RANK],int n);
-void print_result(void);
+static void read_cards(int hand[][SUIT_AND_RANK],int n);
+static void analyse_hand(int hand[][SUIT_AND_RANK],int n);
+static void print_result(void);
 
 #endif

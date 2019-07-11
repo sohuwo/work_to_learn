@@ -17,7 +17,7 @@ void chap10t3(void)
 }
 
 //read_cards:Reads the cards into the variables num_in_rank and num_in_suit;checks for bad cards and duplicate cards.
-void read_cards(int hand[][SUIT_AND_RANK], int n)
+static void read_cards(int hand[][SUIT_AND_RANK], int n)
 {
 	char ch, rank_ch, suit_ch;
 	int rank, suit,exist=0;
@@ -91,7 +91,7 @@ void read_cards(int hand[][SUIT_AND_RANK], int n)
 //analyse_hand:Determines whether the hand contains a straight,a flush,four-of-a-kind,
 //             and/or three-of-a-kind;determines the number of pairs;stores the results
 //             into the external variables straight,flush,four,three,and pairs.
-void analyse_hand(int hand[][SUIT_AND_RANK], int n)
+static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 {
 	int num_consec = 0;
 	int rank, suit;
@@ -116,13 +116,21 @@ void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 	}	
 
 	//check for straight
-	for (int i = 0; i < NUM_CARDS; i++)
+	for (int i = 0; i < NUM_CARDS-1; i++)
 	{
-
+		for (int j = 0; j < NUM_CARDS - i - 1; j++)
+		{
+			if (hand[j][0] > hand[j + 1][0])
+			{
+				int temp = hand[j][0];
+				hand[j][0] = hand[j + 1][0];
+				hand[j + 1][0] = temp;
+			}
+		}
 	}
 
 	rank = 0;
-	//for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++)
+	for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++)
 		num_consec++;
 	if (num_consec == NUM_CARDS)
 	{
@@ -142,7 +150,7 @@ void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 //print_result:Prints the classification of the hand,
 //			   based on the values of the external
 //			   variables straight,flush,four,three,and pairs
-void print_result(void)
+static void print_result(void)
 {
 	if (straight&&flush) printf("Straight flush");
 	else if (four) printf("Four of a kind");

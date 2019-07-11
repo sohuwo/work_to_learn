@@ -2,11 +2,11 @@
 #include <math.h>
 #include <stdio.h>
 
-int a[5][2] = { 5,1,8,1,12,1,7,1,9,1 };
+int a[5][2] = { 5,1,13,1,12,1,7,1,9,1 };
 
 void baiduTieba(void) 
 {
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 5-1; i++)
 	{
 		for (int j = 0; j < 5-i-1; j++)
 		{

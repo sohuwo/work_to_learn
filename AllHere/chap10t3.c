@@ -140,29 +140,37 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 
 	//check for 4-of-a-kind ,3-of-a-kind, and pairs
 	{
-		int i = 1, count_for_four_1 = 1, count_for_four_2 = 0, \
-			count_for_three_3 = 0;
-		for (; i < NUM_CARDS; i++)
+		int i , count_for_1 = 1, count_for_2 = 1, \
+			count_for_3 = 1,count_for_4=1;
+		for (i = 1; i < NUM_CARDS; i++)
 		{
 			if (hand[0][RANK] == hand[i][RANK])
-				count_for_four_1++;
-			if (hand[1][RANK] == hand[i][RANK])
-				count_for_four_2++;
-			if (hand[2][RANK] == hand[i][RANK])
-				count_for_three_3++;
+				count_for_1++;
 		}
-		if (count_for_four_1 == 4 || count_for_four_2 == 4)
+		for (i=2; i < NUM_CARDS; i++)
+		{
+			if (hand[1][RANK] == hand[i][RANK])
+				count_for_2++;
+		}
+		for (i = 3; i < NUM_CARDS; i++)
+		{
+			if (hand[2][RANK] == hand[i][RANK])
+				count_for_3++;
+		}
+		for (i = 4; i < NUM_CARDS; i++)
+		{
+			if (hand[3][RANK] == hand[i][RANK])
+				count_for_4++;
+		}
+		if (count_for_1 == 4 || count_for_2 == 4)
 		{
 			four = true;
 			return;
 		}
-		if (count_for_four_1 == 3 || count_for_four_2 == 3 ||count_for_three_3==3)
+		if (count_for_1 == 3 || count_for_2 == 3 ||count_for_3==3)
 			three = true;
+		
 	}
-	
-
-	
-	//if (num_in_rank[rank] == 3) three = true;
 	//if (num_in_rank[rank] == 2) pairs++;
 }
 

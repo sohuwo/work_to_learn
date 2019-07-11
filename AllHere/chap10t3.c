@@ -120,17 +120,17 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 	{
 		for (int j = 0; j < NUM_CARDS - i - 1; j++)
 		{
-			if (hand[j][0] > hand[j + 1][0])
+			if (hand[j][RANK] > hand[j + 1][RANK])
 			{
-				int temp = hand[j][0];
-				hand[j][0] = hand[j + 1][0];
-				hand[j + 1][0] = temp;
+				int temp = hand[j][RANK];
+				hand[j][RANK] = hand[j + 1][RANK];
+				hand[j + 1][RANK] = temp;
 			}
 		}
 	}
 
-	rank = 0;
-	for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++)
+	rank = hand[0][RANK];
+	for (int i =0; i < NUM_CARDS && hand[i][RANK]==rank; rank++,i++)
 		num_consec++;
 	if (num_consec == NUM_CARDS)
 	{
@@ -141,7 +141,12 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 	//check for 4-of-a-kind ,3-of-a-kind, and pairs
 	for (rank = 0; rank < NUM_RANKS; rank++)
 	{
-		//if (num_in_rank[rank] == 4) four = true;
+		if (hand[0][RANK] == hand[1][RANK] && \
+			hand[1][RANK] == hand[2][RANK] && \
+			hand[2][RANK] == hand[3][RANK] ) four = true;
+		if (hand[3][RANK] == hand[4][RANK] && \
+			hand[1][RANK] == hand[2][RANK] && \
+			hand[2][RANK] == hand[3][RANK]) four = true;
 		//if (num_in_rank[rank] == 3) four = true;
 		//if (num_in_rank[rank] == 2) pairs++;
 	}

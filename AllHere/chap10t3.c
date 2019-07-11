@@ -139,17 +139,19 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 	}
 
 	//check for 4-of-a-kind ,3-of-a-kind, and pairs
-	for (rank = 0; rank < NUM_RANKS; rank++)
+	for (int i = 1, count_for_four_1 = 1, count_for_four_2 = 0; i < NUM_CARDS; i++)
 	{
-		if (hand[0][RANK] == hand[1][RANK] && \
-			hand[1][RANK] == hand[2][RANK] && \
-			hand[2][RANK] == hand[3][RANK] ) four = true;
-		if (hand[3][RANK] == hand[4][RANK] && \
-			hand[1][RANK] == hand[2][RANK] && \
-			hand[2][RANK] == hand[3][RANK]) four = true;
-		//if (num_in_rank[rank] == 3) four = true;
-		//if (num_in_rank[rank] == 2) pairs++;
+		if (hand[0][RANK] == hand[i][RANK])
+			count_for_four_1++;
+		if (hand[1][RANK] == hand[i][RANK])
+			count_for_four_2++;
+		if (count_for_four_1==4 || count_for_four_2 == 4)
+			four = true;
 	}
+
+	
+	//if (num_in_rank[rank] == 3) three = true;
+	//if (num_in_rank[rank] == 2) pairs++;
 }
 
 //print_result:Prints the classification of the hand,

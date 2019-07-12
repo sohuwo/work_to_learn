@@ -33,6 +33,8 @@ static void read_cards(int hand[][SUIT_AND_RANK], int n)
 	while (cards_read < NUM_CARDS)
 	{
 		bad_card = false;
+		
+		exist = false;
 
 		printf("Enter a card: ");
 
@@ -63,7 +65,7 @@ static void read_cards(int hand[][SUIT_AND_RANK], int n)
 		case 'd':case 'D': suit = 1; break;
 		case 'h':case 'H': suit = 2; break;
 		case 's':case 'S': suit = 3; break;
-		default:bad_card = true;
+		default:bad_card = true; suit = 4;
 		}
 
 		while ((ch = getchar()) != '\n')
@@ -72,7 +74,7 @@ static void read_cards(int hand[][SUIT_AND_RANK], int n)
 		for (int i = 0; i < cards_read; i++)
 		{
 			if (hand[i][RANK] == rank && hand[i][SUIT] == suit)
-				exist = 1;
+				exist = true;
 		}
 
 		if (bad_card)

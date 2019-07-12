@@ -98,30 +98,17 @@ static void read_cards(int hand[][SUIT_AND_RANK], int n)
 //             into the external variables straight,flush,four,three,and pairs.
 static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 {
-	int num_consec = 0;
+	int card = 0, run = 0;
 	int rank, suit;
 
-	straight = false;
-	flush = false;
+	straight = true;
+	flush = true;
 	four = false;
 	three = false;
 	pairs = 0;
 
-	//check for flush
-	for (suit = 0; suit < NUM_SUITS; suit++)
-	{
-		int count = 0;
-		for (int i = 0; i < NUM_CARDS; i++)
-		{
-			if (hand[i][SUIT] == suit)
-				count++;
-		}
-		if (count == NUM_CARDS)
-				flush = true;
-	}	
-
-	//check for straight
-	for (int i = 0; i < NUM_CARDS-1; i++)
+	//sort
+	for (int i = 0; i < NUM_CARDS - 1; i++)
 		for (int j = 0; j < NUM_CARDS - i - 1; j++)
 			if (hand[j][RANK] > hand[j + 1][RANK])
 			{
@@ -130,30 +117,37 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 				hand[j + 1][RANK] = temp;
 			}
 
-	rank = hand[0][RANK];
-	for (int i =0; i < NUM_CARDS && hand[i][RANK]==rank; rank++,i++)
-		num_consec++;
-	if (num_consec == NUM_CARDS)
+	//check for flush
+	suit = hand[0][SUIT];
+	for (int i = 1; i < NUM_CARDS; i++)
 	{
-		straight = true;
-		return;
+		if (hand[i][SUIT] != suit)
+		{
+			flush = false;
+			break;
+		}
 	}
 
+	//check for straight
+	for (int i = 0; i < NUM_CARDS-1; i++)
+		if (hand[i][RANK] + 1 != hand[i + 1][RANK])
+			straight = false;
+
 	//check for 4-of-a-kind ,3-of-a-kind, and pairs
-	{//copied from book
-		int card = 0, run = 0;
-		while (card < NUM_CARDS) {
-			rank = hand[card][RANK];
-			run = 0;
-			do {
-				run++;
-				card++;
-			} while (card < NUM_CARDS && hand[card][RANK] == rank);
-			switch (run) {
-			case 2: pairs++;      break;
-			case 3: three = true; break;
-			case 4: four = true;  break;
-			}
+	//copied from book
+	while (card < NUM_CARDS) 
+	{
+		rank = hand[card][RANK];
+		run = 0;
+		do
+		{
+			run++;
+			card++;
+		} while (card < NUM_CARDS && hand[card][RANK] == rank);
+		switch (run) {
+		case 2: pairs++;      break;
+		case 3: three = true; break;
+		case 4: four = true;  break;
 		}
 	}
 }

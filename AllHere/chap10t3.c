@@ -74,7 +74,10 @@ static void read_cards(int hand[][SUIT_AND_RANK], int n)
 		for (int i = 0; i < cards_read; i++)
 		{
 			if (hand[i][RANK] == rank && hand[i][SUIT] == suit)
+			{
 				exist = true;
+				break;
+			}	
 		}
 
 		if (bad_card)
@@ -137,39 +140,21 @@ static void analyse_hand(int hand[][SUIT_AND_RANK], int n)
 	}
 
 	//check for 4-of-a-kind ,3-of-a-kind, and pairs
-	{
-		int i;
-		int count[NUM_CARDS] = { 0 };
-		
-		for (i = 0; i < NUM_CARDS-1; i++)
-			for (int j = i + 1; j < NUM_CARDS; j++)
-				if (hand[i][RANK] == hand[j][RANK])
-					count[i]++;
-		if (count[0] == 3 || count[1] == 3)
-			four = true;
-		if (count[0] == 2)
-		{
-			if (count[3] == 1)
-				pairs = 1;
-			three = true;
-			return;
+	{//copied from book
+		int card = 0, run = 0;
+		while (card < NUM_CARDS) {
+			rank = hand[card][RANK];
+			run = 0;
+			do {
+				run++;
+				card++;
+			} while (card < NUM_CARDS && hand[card][RANK] == rank);
+			switch (run) {
+			case 2: pairs++;      break;
+			case 3: three = true; break;
+			case 4: four = true;  break;
+			}
 		}
-		if (count[2] == 2)
-		{
-			if (count[0] == 1)
-				pairs = 1;
-			three = true;
-			return;
-		}
-		if (count[0] == 2)
-		{
-			three = true;
-			return;
-		}
-		
-		for (i = 0; i < NUM_CARDS - 1; i++)
-			if (count[i] == 1)
-				pairs++;
 	}
 }
 

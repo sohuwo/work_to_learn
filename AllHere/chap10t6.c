@@ -68,12 +68,12 @@ void operation(void)
 		case '5':n = 5; push(n); break;
 		case '6':n = 6; push(n); break;
 		case '7':n = 7; push(n); break;
-		case '8':n = 6; push(n); break;
+		case '8':n = 8; push(n); break;
 		case '9':n = 9; push(n); break;
-		case '+':push(pop() + pop()); break;
-		case '-':push(pop() - pop()); break;
-		case '*':push(pop() * pop()); break;
-		case '/':push(pop() / pop()); break;
+		case '+':n = pop(); push(pop() + n); break;
+		case '-':n = pop(); push(pop() - n); break;
+		case '*':n = pop(); push(pop() * n); break;
+		case '/':n = pop(); push(pop() / n); break;
 		case '=':
 			printf("Value of expression: %d", pop());
 			make_empty();

@@ -77,8 +77,8 @@ void operation(void)
 		case '=':
 			printf("Value of expression: %d", pop());
 			make_empty();
-			break;
-		case '\n':break;
+			getchar();
+			return;
 		default:exit(EXIT_SUCCESS);
 		}
 	} while (c != '\n');
@@ -88,7 +88,7 @@ void chap10t6(void)
 {
 	while (1)
 	{
-		printf("Enter an RPN expression: ");
+		printf("\nEnter an RPN expression: ");
 		operation();
 	}
 }

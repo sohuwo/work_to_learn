@@ -30,7 +30,7 @@ const int segments[10][7] = { {1, 1, 1, 1, 1, 1, 0}, \
 
 char digits[4][MAX_DIGITS * 4];
 /* translating the 7-segment display to a 3x3 grid:
- *
+ * row and col
  *  012
  * 0 _
  * 1|_|

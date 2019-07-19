@@ -198,6 +198,9 @@
     <ClCompile Include="chap11e5.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="chap11e6.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dweight.h">
@@ -378,6 +381,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="chap11e5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chap11e6.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

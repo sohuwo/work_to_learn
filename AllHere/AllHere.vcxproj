@@ -130,6 +130,7 @@
     <ClCompile Include="chap10t7.c" />
     <ClCompile Include="chap11e5.c" />
     <ClCompile Include="chap11e6.c" />
+    <ClCompile Include="chap12e13.c" />
     <ClCompile Include="chap7e13.c" />
     <ClCompile Include="chap7t12.c" />
     <ClCompile Include="chap7t13.c" />
@@ -211,6 +212,7 @@
     <ClInclude Include="chap9t1.h" />
     <ClInclude Include="chap9t7.h" />
     <ClInclude Include="chap9t8.h" />
+    <ClInclude Include="chapter12e13.h" />
     <ClInclude Include="GCD.h" />
     <ClInclude Include="p24e4.h" />
     <ClInclude Include="dweight.h" />

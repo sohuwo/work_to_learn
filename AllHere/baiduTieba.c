@@ -4,5 +4,8 @@
 
 void baiduTieba(void) 
 {
-	printf("\xfc" );
+	char sentence[100];
+	printf("Enter a sentence:\n" );
+	gets_s(sentence,50);
+	printf(sentence);
 }

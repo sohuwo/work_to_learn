@@ -137,6 +137,7 @@
     <ClCompile Include="chap12e7.c" />
     <ClCompile Include="chap12t2.c" />
     <ClCompile Include="chap13e15.c" />
+    <ClCompile Include="chap13remind.c" />
     <ClCompile Include="chap7e13.c" />
     <ClCompile Include="chap7t12.c" />
     <ClCompile Include="chap7t13.c" />
@@ -205,6 +206,7 @@
     <ClInclude Include="chap12e7.h" />
     <ClInclude Include="chap12t2.h" />
     <ClInclude Include="chap13e15.h" />
+    <ClInclude Include="chap13remind.h" />
     <ClInclude Include="chap7e13.h" />
     <ClInclude Include="chap7t12.h" />
     <ClInclude Include="chap7t13.h" />

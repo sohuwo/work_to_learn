@@ -1,4 +1,4 @@
-#include "chap13remind.h"
+#include "chap13t2.h"
 #include <stdio.h>
 #include <string.h>
 //Prints a one-month reminder list
@@ -7,11 +7,11 @@
 
 static int read_line(char str[], int n);
 
-void chap13remind(void)
+void chap13t2(void)
 {
 	char reminders[MAX_REMIND][MSG_LEN + 3];
 	char day_str[3], msg_str[MSG_LEN + 1];
-	int day, i, j, num_remind = 0;
+	int month,day,hour,minute, i, j, num_remind = 0;
 
 	for (;;)
 	{
@@ -21,11 +21,17 @@ void chap13remind(void)
 			break;
 		}
 
-		printf("Enter day and reminder: ");
-		scanf("%2d", &day);
+		printf("Enter date(MM/DD), time(24-hour,XX:XX) and reminder: ");
+		scanf("%2d/%2d", &month,&day);
 		if (day == 0)
 			break;
+		if (day < 0 || day >= 31)
+		{
+			printf("Error, day is wrong.\n");
+			continue;
+		}
 		sprintf(day_str, "%2d", day);
+		scanf("%2d:%2d", &hour, &minute);
 		read_line(msg_str, MSG_LEN);
 
 		for (i = 0; i < num_remind; i++)

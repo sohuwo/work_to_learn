@@ -9,8 +9,8 @@ static int read_line(char str[], int n);
 
 void chap13t2(void)
 {
-	char reminders[MAX_REMIND][MSG_LEN + 3];
-	char day_str[3], msg_str[MSG_LEN + 1];
+	char reminders[MAX_REMIND][MSG_LEN + 12];
+	char day_str[3], month_str[3], hour_str[3], minute_str[3], msg_str[MSG_LEN + 1];
 	int month,day,hour,minute, i, j, num_remind = 0;
 
 	for (;;)
@@ -23,6 +23,13 @@ void chap13t2(void)
 
 		printf("Enter date(MM/DD), time(24-hour,XX:XX) and reminder: ");
 		scanf("%2d/%2d", &month,&day);
+		if (month == 0)
+			break;
+		if (month < 0 || month >= 13)
+		{
+			printf("Error, month is wrong.\n");
+			continue;
+		}
 		if (day == 0)
 			break;
 		if (day < 0 || day >= 31)
@@ -30,8 +37,11 @@ void chap13t2(void)
 			printf("Error, day is wrong.\n");
 			continue;
 		}
-		sprintf(day_str, "%2d", day);
+		sprintf(day_str, "%02d", day);
+		sprintf(month_str, "%02d", month);
 		scanf("%2d:%2d", &hour, &minute);
+		sprintf(hour_str, "%02d", hour);
+		sprintf(minute_str, "%02d", minute);
 		read_line(msg_str, MSG_LEN);
 
 		for (i = 0; i < num_remind; i++)
@@ -40,7 +50,10 @@ void chap13t2(void)
 		for (j = num_remind; j > i; j--)
 			strcpy(reminders[j], reminders[j - 1]);
 
-		strcpy(reminders[i], day_str);
+		strcpy(reminders[i], month_str);
+		strcat(reminders[i], day_str);
+		strcat(reminders[i], hour_str);
+		strcat(reminders[i], minute_str);
 		strcat(reminders[i], msg_str);
 
 		num_remind++;

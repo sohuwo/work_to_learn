@@ -28,6 +28,8 @@ void chap13t2(void)
 		if (month < 0 || month >= 13)
 		{
 			printf("Error, month is wrong.\n");
+			while (getchar() != '\n')
+				;
 			continue;
 		}
 		if (day == 0)
@@ -35,6 +37,8 @@ void chap13t2(void)
 		if (day < 0 || day >= 31)
 		{
 			printf("Error, day is wrong.\n");
+			while (getchar() != '\n')
+				;
 			continue;
 		}
 		scanf("%2d:%2d", &hour, &minute);

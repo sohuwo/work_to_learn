@@ -4,8 +4,11 @@
 
 void baiduTieba(void) 
 {
-	char sentence[100];
-	printf("Enter a sentence:\n" );
-	gets_s(sentence,50);
-	printf(sentence);
+	char *str = "flower";
+	for (int i = 0;str[i] !='\0';i++)
+	{
+		if (str[i] == 'w')
+			str[i] = '\0';
+	}
+	printf("%s", str);
 }

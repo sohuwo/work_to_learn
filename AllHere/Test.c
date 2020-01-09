@@ -1,8 +1,8 @@
-#include "chap13t6.h"
+#include "baiduTieba.h"
 //This is main
 //Here include file
 int main(int argc,char *argv[])
 {
-	chap13t6(argc,argv);
+	baiduTieba();
 	return 0;
 }
